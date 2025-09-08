@@ -1,0 +1,81 @@
+/* global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*grid er colum gula joto toko jaiga pabe bode jabe,tobe minimum 250px ,ofr diya soman vag bujacche)*/
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center; /* card gula center e thakbe*/
+    transition: transform 0.3s; /*card ekto boro hoye jabe mane 1.05 gun boro*/
+}
+/*card ekto boro hoye jabe mane 1.05 gun boro*/
+.card:hover {
+    transform: scale(1.05);  
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Nav for small screens.brootsrap use kole amni te e responsive hoye jai,,,,aigula use kora lage na ,,,,
+ai khane kinto shudu nav niya kaj kora hoyrece,,,card niya kaj kora hoy nai karon grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));ai 
+code er jonno. 
+
+ */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+}
